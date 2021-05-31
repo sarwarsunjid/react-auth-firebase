@@ -3,18 +3,16 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import UpdateProfile from './components/UpdateProfile';
 import { BrowserRouter, Route } from "react-router-dom";
-import { Dashboard } from './components/Dashboard';
+import  Dashboard  from './components/Dashboard';
 
 
 function App() {
   return (
     <BrowserRouter>
       <Route path="/" exact component={Dashboard} />
-      <Route path ="/login" exact componnet={Login}/>
-      <Route path="signup" exact component={Signup} />
-      <Route path="update-profile" exact component={UpdateProfile} />
-        {/* <Login /> */}
-
+      <Route path ="/login" exact component={Login} />
+      <Route path="/signup" exact component={Signup} />
+      <Route path="/update-profile" exact component={UpdateProfile} />
     </BrowserRouter>
   );
 }

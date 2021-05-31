@@ -13,6 +13,10 @@ const useAuth = () => {
     const signup = (email, password) => {
       return auth.createUserWithEmailAndPassword(email, password);
     };
+
+    const login = (email, password) => {
+      return auth.signInWithEmailAndPassword(email, password)
+    }
   
     useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -24,7 +28,7 @@ const useAuth = () => {
 
     return (
         <AuthContext.Provider value={{
-            currentUser, signup
+            currentUser, signup, login
           }}>
           {props.children}
         </AuthContext.Provider>

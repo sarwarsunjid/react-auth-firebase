@@ -51,7 +51,7 @@ export const Login = () => {
                         </Form.Group>
 
                         <Button disabled={loading} className="w-100 mt-3" type="submit">
-                            Sign Up
+                            Login
                         </Button>
                     </Form>
                 </Card.Body>
